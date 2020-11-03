@@ -15,7 +15,6 @@ import javax.persistence.ManyToMany;
 import org.hibernate.annotations.CreationTimestamp;
 
 
-
 @Entity
 public class User {
 
