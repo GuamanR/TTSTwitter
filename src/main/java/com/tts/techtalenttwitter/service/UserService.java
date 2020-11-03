@@ -35,7 +35,7 @@ public User findByUsername(String username){
     
 }
 
-public List<User> findALL(){
+public List<User> findAll(){
     return (List<User>) userRepository.findAll();
     
 }
