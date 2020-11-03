@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/custom.js"></script>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Login!</h2>
+        <form th:action="@{/login}" method="post"></form>
+        <input type="text" id="username" name="username" th:placeholder="Username" class="form-control" ><br/>
+        <input type="password" id="password" name="password" th:placeholder="Password" class="form-control" ><br/>
+        <div align= "center" th:if="${param.error}">
+            <h4 style="color:red">Login Unsuccessful</h4>
+        </div>
+        <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit" >
+            Log in
+        </button>
+    </div>
+    
+</body>
+</html>
